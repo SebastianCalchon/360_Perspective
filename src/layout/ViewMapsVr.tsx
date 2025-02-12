@@ -38,12 +38,12 @@ const ViewMapsVr = ({ children }) => {
             rotateSpeed={-0.7}
           />
 
-          <ambientLight intensity={0.8} />
+          <ambientLight intensity={0.2} />
 
           <hemisphereLight 
             skyColor={0xffffff} 
             groundColor={0xffffff} 
-            intensity={0.6} 
+            intensity={0.3} 
           />
 
           <Environment preset="lobby" blur={0.5} />
