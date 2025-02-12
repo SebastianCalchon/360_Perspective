@@ -6,8 +6,6 @@ export function Model({ textures, ...props }) {
   const { nodes, materials } = useGLTF('/Sphere-transformed.glb');
   const [updatedMaterials, setUpdatedMaterials] = useState({ ...materials });
   
-  console.log("🕸️ ~ Model ~ renderizado....");
-
   useEffect(() => {
     const newMaterials = { ...updatedMaterials }; 
 
@@ -15,7 +13,6 @@ export function Model({ textures, ...props }) {
       if (texture) {
         texture.flipY = false;
         texture.encoding = THREE.sRGBEncoding;
-
         const verticalIndex = Math.floor(index / 16);
         const horizontalIndex = index % 16;
         const materialName = `Material_${verticalIndex}_${horizontalIndex}`;

@@ -1,7 +1,6 @@
 import * as THREE from "three";
 import { create } from "zustand";
 import type { TImagen360 } from "@/components/dome";
-import { toast } from "react-toastify";
 
 const imagens360: TImagen360[] = [
   {
@@ -412,10 +411,10 @@ const imagens360: TImagen360[] = [
       { target: 3, position: new THREE.Vector3(-30, 0, -22) },
     ],
   },
-  
-  { 
+
+  {
     name: "Entrada Patio de UnimetaTech",
-    url: [ 
+    url: [
       "/public/imagen360/Entrada_Patio-min/slice_0_0.jpg",
       "/public/imagen360/Entrada_Patio-min/slice_0_1.jpg",
       "/public/imagen360/Entrada_Patio-min/slice_0_2.jpg",
@@ -550,11 +549,11 @@ const imagens360: TImagen360[] = [
       { target: 4, position: new THREE.Vector3(-2, 0, -20) }, // Este es el target 4
       { target: 5, position: new THREE.Vector3(10, 0, -10) }, // Este es el target 5
       { target: 3, position: new THREE.Vector3(10, 0, 0) }, // Este es el target 6
-    ], 
+    ],
   },
   {
     name: "Escaleras de Viroo",
-    url : [
+    url: [
       "/public/imagen360/Escaleras_Viroo-min/slice_0_0.jpg",
       "/public/imagen360/Escaleras_Viroo-min/slice_0_1.jpg",
       "/public/imagen360/Escaleras_Viroo-min/slice_0_2.jpg",
@@ -684,145 +683,419 @@ const imagens360: TImagen360[] = [
       "/public/imagen360/Escaleras_Viroo-min/slice_7_14.jpg",
       "/public/imagen360/Escaleras_Viroo-min/slice_7_15.jpg",
     ],
-    links : [
+    links: [
       { target: 3, position: new THREE.Vector3(2, 0, 5) },
+      { target: 6, position: new THREE.Vector3(10, 1, 7) }, //Este es el target 7
     ]
   },
   {
     name: "Patio UnimetaTech",
     url: [
-       "/public/imagen360/Patio_unimetatech-min/slice_0_0.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_0_1.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_0_2.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_0_3.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_0_4.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_0_5.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_0_6.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_0_7.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_0_8.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_0_9.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_0_10.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_0_11.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_0_12.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_0_13.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_0_14.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_0_15.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_1_0.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_1_1.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_1_2.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_1_3.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_1_4.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_1_5.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_1_6.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_1_7.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_1_8.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_1_9.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_1_10.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_1_11.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_1_12.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_1_13.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_1_14.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_1_15.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_2_0.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_2_1.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_2_2.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_2_3.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_2_4.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_2_5.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_2_6.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_2_7.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_2_8.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_2_9.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_2_10.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_2_11.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_2_12.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_2_13.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_2_14.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_2_15.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_3_0.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_3_1.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_3_2.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_3_3.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_3_4.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_3_5.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_3_6.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_3_7.jpg", 
-       "/public/imagen360/Patio_unimetatech-min/slice_3_8.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_3_9.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_3_10.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_3_11.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_3_12.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_3_13.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_3_14.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_3_15.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_4_0.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_4_1.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_4_2.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_4_3.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_4_4.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_4_5.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_4_6.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_4_7.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_4_8.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_4_9.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_4_10.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_4_11.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_4_12.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_4_13.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_4_14.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_4_15.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_5_0.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_5_1.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_5_2.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_5_3.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_5_4.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_5_5.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_5_6.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_5_7.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_5_8.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_5_9.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_5_10.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_5_11.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_5_12.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_5_13.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_5_14.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_5_15.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_6_0.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_6_1.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_6_2.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_6_3.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_6_4.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_6_5.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_6_6.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_6_7.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_6_8.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_6_9.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_6_10.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_6_11.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_6_12.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_6_13.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_6_14.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_6_15.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_7_0.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_7_1.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_7_2.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_7_3.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_7_4.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_7_5.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_7_6.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_7_7.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_7_8.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_7_9.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_7_10.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_7_11.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_7_12.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_7_13.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_7_14.jpg",
-       "/public/imagen360/Patio_unimetatech-min/slice_7_15.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_0_0.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_0_1.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_0_2.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_0_3.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_0_4.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_0_5.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_0_6.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_0_7.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_0_8.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_0_9.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_0_10.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_0_11.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_0_12.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_0_13.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_0_14.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_0_15.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_1_0.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_1_1.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_1_2.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_1_3.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_1_4.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_1_5.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_1_6.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_1_7.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_1_8.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_1_9.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_1_10.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_1_11.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_1_12.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_1_13.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_1_14.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_1_15.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_2_0.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_2_1.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_2_2.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_2_3.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_2_4.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_2_5.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_2_6.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_2_7.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_2_8.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_2_9.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_2_10.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_2_11.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_2_12.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_2_13.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_2_14.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_2_15.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_3_0.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_3_1.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_3_2.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_3_3.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_3_4.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_3_5.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_3_6.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_3_7.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_3_8.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_3_9.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_3_10.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_3_11.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_3_12.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_3_13.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_3_14.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_3_15.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_4_0.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_4_1.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_4_2.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_4_3.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_4_4.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_4_5.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_4_6.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_4_7.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_4_8.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_4_9.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_4_10.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_4_11.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_4_12.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_4_13.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_4_14.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_4_15.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_5_0.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_5_1.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_5_2.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_5_3.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_5_4.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_5_5.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_5_6.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_5_7.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_5_8.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_5_9.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_5_10.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_5_11.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_5_12.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_5_13.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_5_14.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_5_15.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_6_0.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_6_1.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_6_2.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_6_3.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_6_4.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_6_5.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_6_6.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_6_7.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_6_8.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_6_9.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_6_10.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_6_11.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_6_12.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_6_13.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_6_14.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_6_15.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_7_0.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_7_1.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_7_2.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_7_3.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_7_4.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_7_5.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_7_6.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_7_7.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_7_8.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_7_9.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_7_10.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_7_11.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_7_12.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_7_13.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_7_14.jpg",
+      "/public/imagen360/Patio_unimetatech-min/slice_7_15.jpg",
     ],
-    links : [
+    links: [
       { target: 3, position: new THREE.Vector3(0, 0, 5) },
-      {target: 4, position: new THREE.Vector3(-8, -0.2, 5)},
+      { target: 4, position: new THREE.Vector3(-8, -0.2, 5) },
+    ]
+  },
+  {
+    name: "Entrada sala viroo",
+    url: [
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_0_0.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_0_1.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_0_2.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_0_3.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_0_4.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_0_5.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_0_6.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_0_7.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_0_8.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_0_9.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_0_10.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_0_11.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_0_12.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_0_13.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_0_14.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_0_15.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_1_0.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_1_1.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_1_2.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_1_3.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_1_4.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_1_5.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_1_6.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_1_7.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_1_8.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_1_9.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_1_10.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_1_11.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_1_12.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_1_13.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_1_14.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_1_15.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_2_0.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_2_1.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_2_2.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_2_3.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_2_4.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_2_5.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_2_6.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_2_7.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_2_8.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_2_9.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_2_10.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_2_11.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_2_12.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_2_13.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_2_14.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_2_15.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_3_0.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_3_1.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_3_2.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_3_3.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_3_4.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_3_5.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_3_6.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_3_7.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_3_8.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_3_9.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_3_10.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_3_11.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_3_12.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_3_13.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_3_14.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_3_15.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_4_0.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_4_1.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_4_2.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_4_3.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_4_4.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_4_5.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_4_6.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_4_7.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_4_8.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_4_9.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_4_10.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_4_11.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_4_12.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_4_13.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_4_14.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_4_15.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_5_0.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_5_1.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_5_2.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_5_3.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_5_4.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_5_5.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_5_6.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_5_7.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_5_8.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_5_9.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_5_10.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_5_11.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_5_12.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_5_13.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_5_14.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_5_15.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_6_0.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_6_1.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_6_2.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_6_3.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_6_4.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_6_5.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_6_6.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_6_7.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_6_8.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_6_9.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_6_10.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_6_11.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_6_12.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_6_13.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_6_14.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_6_15.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_7_0.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_7_1.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_7_2.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_7_3.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_7_4.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_7_5.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_7_6.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_7_7.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_7_8.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_7_9.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_7_10.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_7_11.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_7_12.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_7_13.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_7_14.jpg",
+      "/public/imagen360/Entrada_Sala_Viroo-min/slice_7_15.jpg",
+    ],
+    links: [
+      { target: 5, position: new THREE.Vector3(-0.5, 0, 5) },
+      { target: 7, position: new THREE.Vector3(1.5, 0, -5) },
+    ]
+  },
+  {
+    name: "Sala Viroo",
+    url: [
+      "/public/imagen360/Sala_Viroo-min/slice_0_0.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_0_1.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_0_2.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_0_3.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_0_4.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_0_5.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_0_6.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_0_7.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_0_8.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_0_9.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_0_10.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_0_11.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_0_12.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_0_13.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_0_14.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_0_15.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_1_0.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_1_1.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_1_2.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_1_3.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_1_4.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_1_5.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_1_6.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_1_7.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_1_8.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_1_9.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_1_10.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_1_11.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_1_12.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_1_13.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_1_14.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_1_15.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_2_0.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_2_1.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_2_2.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_2_3.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_2_4.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_2_5.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_2_6.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_2_7.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_2_8.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_2_9.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_2_10.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_2_11.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_2_12.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_2_13.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_2_14.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_2_15.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_3_0.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_3_1.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_3_2.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_3_3.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_3_4.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_3_5.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_3_6.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_3_7.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_3_8.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_3_9.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_3_10.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_3_11.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_3_12.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_3_13.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_3_14.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_3_15.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_4_0.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_4_1.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_4_2.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_4_3.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_4_4.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_4_5.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_4_6.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_4_7.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_4_8.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_4_9.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_4_10.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_4_11.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_4_12.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_4_13.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_4_14.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_4_15.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_5_0.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_5_1.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_5_2.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_5_3.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_5_4.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_5_5.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_5_6.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_5_7.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_5_8.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_5_9.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_5_10.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_5_11.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_5_12.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_5_13.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_5_14.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_5_15.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_6_0.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_6_1.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_6_2.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_6_3.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_6_4.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_6_5.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_6_6.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_6_7.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_6_8.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_6_9.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_6_10.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_6_11.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_6_12.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_6_13.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_6_14.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_6_15.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_7_0.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_7_1.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_7_2.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_7_3.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_7_4.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_7_5.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_7_6.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_7_7.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_7_8.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_7_9.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_7_10.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_7_11.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_7_12.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_7_13.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_7_14.jpg",
+      "/public/imagen360/Sala_Viroo-min/slice_7_15.jpg",
+    ],
+    links: [
+      { target: 6, position: new THREE.Vector3(-12.5, 0, 5) },
     ]
   }
 ];
@@ -850,20 +1123,15 @@ export const useZones = create<TStatesZones & TActionZones>()((set, get) => ({
     set(() => ({ currentIndex: index }));
     priorityItem();
   },
-  preloadTexture: async (chunkSize) => {
-    const currentIndex = get().currentIndex;
+  preloadTexture: async () => {
     const imagens = get().imagens360;
     const { maps } = get();
 
-    const halfChunk = Math.floor((chunkSize - 1) / 2);
-    const toLoad = [];
 
-    for (let i = 1; i <= halfChunk; i++) {
-      if (currentIndex - i >= 0 && !maps[currentIndex - i]) {
-        toLoad.push(currentIndex - i);
-      }
-      if (currentIndex + i < imagens.length && !maps[currentIndex + i]) {
-        toLoad.push(currentIndex + i);
+    const toLoad: number[] = [];
+    for (let i = 0; i < imagens.length; i++) {
+      if (!maps[i]) {
+        toLoad.push(i);
       }
     }
 
@@ -871,6 +1139,7 @@ export const useZones = create<TStatesZones & TActionZones>()((set, get) => ({
       toLoad.map(async (index) => {
         const img = imagens[index];
         if (Array.isArray(img.url) && img.url.length > 0) {
+          // Load all textures for this image array.
           const textures = await Promise.all(
             img.url.map((url) => {
               return new Promise<THREE.Texture>((resolve, reject) => {
@@ -879,12 +1148,11 @@ export const useZones = create<TStatesZones & TActionZones>()((set, get) => ({
                   url,
                   (texture) => resolve(texture),
                   undefined,
-                  (err) => reject(err),
+                  (err) => reject(err)
                 );
               });
             })
           );
-
           return { index, textures };
         }
         return null;
@@ -899,12 +1167,13 @@ export const useZones = create<TStatesZones & TActionZones>()((set, get) => ({
     set((state) => ({ maps: { ...state.maps, ...newTextures } }));
   },
 
+
   priorityItem: async () => {
     const { currentIndex, imagens360, maps } = get();
     const currentImage = imagens360[currentIndex];
     const totalTextures = currentImage.url.length;
-    
-  
+
+
     if (maps[currentIndex] && maps[currentIndex].filter(Boolean).length === totalTextures) {
       set(() => ({
         currentImg360: { ...currentImage, url: maps[currentIndex] }
@@ -913,15 +1182,13 @@ export const useZones = create<TStatesZones & TActionZones>()((set, get) => ({
     }
 
     const loader = new THREE.TextureLoader();
-    loader.setCrossOrigin("anonymous");
-
     if (!maps[currentIndex]) {
       set((state) => ({
         currentImg360: { ...currentImage, url: new Array(totalTextures) },
         maps: { ...state.maps, [currentIndex]: new Array(totalTextures) }
       }));
     }
-    
+
     const cols = 16;
     const rows = totalTextures / cols;
     const centerRow = (rows - 1) / 2;
@@ -931,18 +1198,18 @@ export const useZones = create<TStatesZones & TActionZones>()((set, get) => ({
       const rowA = Math.floor(a / cols);
       const colA = a % cols;
       const distA = Math.sqrt((rowA - centerRow) ** 2 + (colA - centerCol) ** 2);
-    
+
       const rowB = Math.floor(b / cols);
       const colB = b % cols;
       const distB = Math.sqrt((rowB - centerRow) ** 2 + (colB - centerCol) ** 2);
       return distA - distB;
     });
-    
+
 
     const visibleCount = 16;
     const visibleIndices = indices.slice(0, visibleCount);
     const backgroundIndices = indices.slice(visibleCount);
-    
+
     const updateTexture = (index: number, texture: THREE.Texture) => {
       set((state) => {
         const newTextures = state.maps[currentIndex]
@@ -955,19 +1222,17 @@ export const useZones = create<TStatesZones & TActionZones>()((set, get) => ({
         };
       });
     };
-    
-    // Cargar el primer chunk de imágenes visibles de inmediato
+
     const visiblePromise = Promise.all(
       visibleIndices.map(async (index) => {
         const texture = await loader.loadAsync(currentImage.url[index]);
-        // Ajustes opcionales para el primer grupo
         texture.flipY = false;
         texture.generateMipmaps = false;
         texture.minFilter = THREE.LinearFilter;
         updateTexture(index, texture);
       })
     );
-    
+
     const loadBackgroundTextures = async () => {
       await Promise.all(
         backgroundIndices.map(async (index) => {
@@ -982,6 +1247,7 @@ export const useZones = create<TStatesZones & TActionZones>()((set, get) => ({
         })
       );
     };
-    await Promise.all([visiblePromise, loadBackgroundTextures()]); 
-  },  
+    await Promise.all([visiblePromise, loadBackgroundTextures()]);
+
+  },
 }));
